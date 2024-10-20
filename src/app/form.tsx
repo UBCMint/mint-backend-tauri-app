@@ -40,7 +40,7 @@ export default function Form() {
     return (
         <div className="max-w-md mx-auto p-5 border border-gray-300 rounded-lg bg-gray-800">
             <form onSubmit={handleNameSubmit} className="">
-                <div className="mb-4">
+                <div className="mb-2">
                     <label htmlFor="name" className="block mb-2 font-bold">
                         Name
                     </label>
@@ -55,7 +55,7 @@ export default function Form() {
                 </div>
                 <button
                     type="submit"
-                    className="px-5 py-2 bg-blue-500 text-white rounded-md hover:bg-blue-700"
+                    className="w-full px-5 py-2 bg-blue-500 text-white rounded-md hover:bg-blue-700 transition duration-300 ease-in-out mb-4"
                 >
                     Submit
                 </button>
@@ -71,7 +71,7 @@ export default function Form() {
             </form>
 
             {users.length > 0 && (
-                <ul className="w-full text-white mt-4 space-y-2">
+                <ul className="w-full text-white mt-2 space-y-2">
                     {users.map(user => (
                         <li key={user.id} className="border-b border-gray-600 pb-2 text-gray-200">
                             {user.name} - {user.email}
